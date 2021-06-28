@@ -115,6 +115,13 @@ header{
     float: left;
     position: relative;
 }
+.menu li:nth-child(1){
+    display: none;
+}
+.menu li:nth-child(2){
+    display: none;
+}
+
 .rightPart{
     /* background: gold; */
     float: right;
