@@ -272,7 +272,13 @@ main{
         position: static;
         transform: none;
         opacity: 1;
+        /* max-height: 0; */
+        transition: 0.5s;
+        overflow: hidden;
         /* background: none; */
+    }
+    .menu .accordeon{
+        max-height: 500px;
     }
     .menu li{
         float: none;
