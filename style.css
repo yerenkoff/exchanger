@@ -277,9 +277,6 @@ main{
         overflow: hidden;
         /* background: none; */
     }
-    .menu .accordeon{
-        max-height: 500px;
-    }
     .menu li{
         float: none;
         
