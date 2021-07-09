@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Klientela | История</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="history.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="index.html" id="logo">
+                <img src="img/logo.svg" alt="">
+                <img src="img/logoText.svg" alt="">
+            </a>
+            <input type="checkbox" id="check">
+            <label id="hamburger" for="check">
+                <span></span>
+            </label>
+            <ul class="menu">
+                <li>
+                    <a href="">Вход</a>
+                </li>
+                <li>
+                    <a href="" class="signUpButton">Регистрация</a>
+                </li>
+                <li>
+                    <a href="#/" class="menuButton">
+                        Новости
+                        <img src="img/tri.svg" alt="">
+                    </a>
+                    <nav>
+                        <a href="">
+                            <img src="img/circle.svg" alt="">
+                            новости
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                        <a href="">
+                            <img src="img/circle.svg" alt="">
+                            аналитика
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                        <a href="">
+                            <img src="img/circle.svg" alt="">
+                            сигналы
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </nav>
+                </li>
+                <li>
+                    <a href="">Поддержка</a>
+                </li>
+                <li>
+                    <a href="#/" class="menuButton">
+                        Финансы
+                        <img src="img/tri.svg" alt="">
+                    </a>
+                    <nav>
+                        <a href="">
+                            <img src="img/circle.svg" alt="">
+                            обмен
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                        <a href="">
+                            <img src="img/circle.svg" alt="">
+                            балансы
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                        <a href="">
+                            <img src="img/circle.svg" alt="">
+                            история
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </nav>
+                </li>
+            </ul>
+            <div class="rightPart">
+                <a href="" class="loginButton">
+                    Вход
+                </a>
+                <a href="" class="signUpButton">
+                    Регистрация
+                </a>
+            </div>
+        </header>
+        <main>
+            <ul class="sideMenu">
+                <li>
+                    <a href="">Обмен</a>
+                </li>
+                <li>
+                    <a href="">Балансы</a>
+                </li>
+                <li>
+                    <a href="">
+                        <b>История</b>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="">История ввода и вывода средств</a>
+                        </li>
+                        <li>
+                            <a href="">История обменов</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tableContainer">
+                <h1>История</h1>
+                <form action="">
+                    <table>
+                        <tr>
+                            <th>Тип операции</th>
+                            <th>Валюта</th>
+                            <th>Сумма</th>
+                            <th>Дата</th>
+                            <th>Статус</th>
+                            <th>Остаток на счету</th>
+                            <th>Счет/Адрес</th>
+                        </tr>
+                        <tr>
+                            <td>Покупка</td>
+                            <td>₽</td>
+                            <td>10 000</td>
+                            <td>01/04/2020</td>
+                            <td>в обработке</td>
+                            <td>10 000</td>
+                            <td>934829385</td>
+                        </tr>
+                        <tr>
+                            <td>Продажа</td>
+                            <td>₽</td>
+                            <td>12 000</td>
+                            <td>01/04/2020</td>
+                            <td>в обработке</td>
+                            <td>10 000</td>
+                            <td>934829386</td>
+                        </tr>
+                        <tr>
+                            <td>Покупка</td>
+                            <td>₽</td>
+                            <td>10 000</td>
+                            <td>01/04/2020</td>
+                            <td>в обработке</td>
+                            <td>10 000</td>
+                            <td>934829384</td>
+                        </tr>
+                        <tr>
+                            <td>Покупка</td>
+                            <td>₽</td>
+                            <td>11 000</td>
+                            <td>01/04/2020</td>
+                            <td>в обработке</td>
+                            <td>10 000</td>
+                            <td>934829385</td>
+                        </tr>
+                        <tr>
+                            <td>Продажа</td>
+                            <td>₽</td>
+                            <td>15 000</td>
+                            <td>01/04/2020</td>
+                            <td>в обработке</td>
+                            <td>10 000</td>
+                            <td>934829386</td>
+                        </tr>
+                        <tr>
+                            <td>Покупка</td>
+                            <td>₽</td>
+                            <td>10 000</td>
+                            <td>01/04/2020</td>
+                            <td>в обработке</td>
+                            <td>10 000</td>
+                            <td>934829384</td>
+                        </tr>
+                    </table>
+                    <button>Загрузить ещё</button>
+                </form>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
