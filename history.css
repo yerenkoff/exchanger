@@ -36,7 +36,7 @@ main .mainContent {
   float: right;
 }
 
-main .mainContent h1 {
+main .mainContent h2 {
   line-height: 60px;
   font-size: 45px;
   margin: 20px 0;
@@ -48,6 +48,10 @@ main .mainContent form {
   padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+main .mainContent form .tableContainer {
+  overflow-x: scroll;
 }
 
 main .mainContent form table {
@@ -69,6 +73,7 @@ main .mainContent form table tr td, main .mainContent form table tr th {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 15px;
+  white-space: nowrap;
 }
 
 main .mainContent form table tr th {
@@ -99,9 +104,6 @@ main .mainContent form button:hover {
   }
   main .mainContent {
     width: 100%;
-  }
-  main .mainContent .tableContainer {
-    overflow-x: scroll;
   }
   main .mainContent form {
     padding: 15px 0;
