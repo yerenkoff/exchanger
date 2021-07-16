@@ -1,7 +1,9 @@
 main
     margin-top: 54px
     font-size: 16px
-    padding: 0 20px
+    padding: 0 20px 100px
+    // float: left
+    overflow: hidden
     color: #3D4B71
     a
         color: #3D4B71
@@ -22,7 +24,7 @@ main
             list-style: disc
             list-style-position: inside
             padding-left: 15px
-    .tableContainer
+    .mainContent
         width: 80%
         float: right
         h1
@@ -47,12 +49,13 @@ main
                         background-color: #fafafa
                     // &:first-child
                     //     background-color: #f4f4f4
-                    th
-                        color: #888
                     td, th
                         // border: 1px solid #000
                         box-sizing: border-box
                         padding: 0 15px
+                    th
+                        color: #888
+                        padding: 0 15px 15px
             button
                 padding: 0 50px
                 line-height: 60px
@@ -65,3 +68,17 @@ main
                     border: 1px solid #888
                     cursor: pointer
                     background-color: #fff
+@media (max-width: 600px)
+    main 
+        .sideMenu
+            width: 100%
+        .mainContent
+            width: 100%
+            .tableContainer
+                overflow-x: scroll
+            form
+                padding: 15px 0
+                border: 1px solid #E8E8E8
+                table
+                    th
+                        line-height: 20px

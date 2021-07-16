@@ -19,6 +19,7 @@ header{
     top: 0;
     left: 0;
     z-index: 9;
+    border-bottom: 1px solid #E8E8E8
     /* position: relative; */
 }
 #logo{
@@ -288,6 +289,14 @@ main{
         text-align: left;
         white-space: normal;
         
+    }
+    .menu li:nth-child(1){
+        display: block;
+        margin-top: 50px;
+    }
+    .menu li:nth-child(2){
+        display: block;
+        margin-bottom: 50px;
     }
     #check, #hamburger{
         display: block;
