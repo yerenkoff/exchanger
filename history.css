@@ -36,12 +36,6 @@ main .mainContent {
   float: right;
 }
 
-main .mainContent h2 {
-  line-height: 60px;
-  font-size: 45px;
-  margin: 20px 0;
-}
-
 main .mainContent form {
   background: #F4F4F4;
   border-radius: 4px;
