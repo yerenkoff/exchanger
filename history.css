@@ -70,6 +70,20 @@ main .mainContent form table tr td, main .mainContent form table tr th {
   white-space: nowrap;
 }
 
+main .mainContent form table tr td a, main .mainContent form table tr th a {
+  border: 1px solid #ccc;
+  line-height: 30px;
+  border-radius: 15px;
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 0 10px;
+}
+
+main .mainContent form table tr td a:hover, main .mainContent form table tr th a:hover {
+  border: 1px solid #555;
+}
+
 main .mainContent form table tr th {
   color: #888;
   padding: 0 15px 15px;
