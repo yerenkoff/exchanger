@@ -301,6 +301,7 @@ main {
     line-height: 60px;
     font-size: 45px;
     margin: 20px 0;
+    clear: both;
     color: #3D4B71;
 }
 
