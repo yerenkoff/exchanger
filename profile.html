@@ -6,28 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Klientela</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="profile.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="modal loginModal">
-            <form action="">
-                <h2>Вход</h2>
-                <input type="text" placeholder="Логин">
-                <input type="text" placeholder="Пароль">
-                <a href="">Забыли пароль?</a>
-                <a href="" class="orangeButton">Войти</a>
-                <a href="">Зарегистрироваться</a>
-            </form>
-        </div>
-        <div class="modal signUpModal">
-            <form action="">
-                <h2>Регистрация</h2>
-                <input type="text" placeholder="Почта">
-                <input type="text" placeholder="Придумайте пароль">
-                <input type="checkbox" id="signUpBox"> <label for="signUpBox">Принять <a href="">условия соглашения</a></label>
-                <a href="" class="orangeButton">Зарегистрироваться</a>
-            </form>
-        </div>
         <header>
             <!-- <div class="container"> -->
             <a href="index.html" id="logo">
@@ -96,47 +78,85 @@
                 </li>
             </ul>
             <div class="rightPart">
-                <a href="#/" class="loginButton">
+                <a href="" class="loginButton">
                     <!-- <img src="img/loginIcon.svg"> -->
                     Вход
                 </a>
-                <a href="#/" class="signUpButton">
+                <a href="" class="signUpButton">
                     Регистрация
                 </a>
             </div>
             <!-- </div> -->
         </header>
-        <div class="banner">
-            <h1>Пополни от 0%</h1>
-            <p>Быстро. Легко. Надежно.</p>
-            <div class="bannerButtons">
-                <a href="">Связаться</a>
-                <a href="">Пополнить</a>
-            </div>
-            <div>
-                <img src="img/banner1.svg" alt="">
-                <img src="img/banner2.svg" alt="">
-                <img src="img/banner0.svg" alt="">
-            </div>
-        </div>
         <main>
-            <div class="mainPageCard">
-                <img src="img/mainPageCard0.svg" alt="">
-                <div>
-                    <h2>Выведи от 0%</h2>
-                    <a href="">Пополнить</a>
-                    <a href="">Cвязаться</a>
+            <h2 class="sectionTitle">Базовая информация</h2>
+            <ul class="sideMenu">
+                <li>
+                    <a href="">Обмен</a>
+                </li>
+                <li>
+                    <a href="">Балансы</a>
+                </li>
+                <li>
+                    <a href="">
+                        <b>История</b>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="">История ввода и вывода средств</a>
+                        </li>
+                        <li>
+                            <a href="">История обменов</a>
+                        </li>
+                        <li>
+                            <a href="">История кодов</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="mainRight">
+                <div class="profileCard">
+                    <div class="profileLeft">
+                        <img src="img/man.jpg" alt="">
+                        <img src="img/vip.svg" alt="">
+                    </div>
+                    <div class="profileRight">
+                        <div class="profileEmail">
+                            <a href="">User@mail.com</a>
+                            <img src="img/mark.svg" alt="">
+                        </div>
+                        <a href="">Изменить Email</a>
+                        <a href="">Узнать подробнее</a>
+                        <a href="" class="profileButton">
+                            <img src="img/verif.svg" alt="">
+                            Верифицировать
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="mainPageCard">
-                <img src="img/mainPageCard1.svg" alt="">
-                <div>
-                    <h2>Обменяй от 0,01%</h2>
-                    <a href="">Пополнить</a>
-                    <a href="">Cвязаться</a>
+                <div class="profileInfo">
+                    <div class="infoLeft">
+                        <h3>Личные данные</h3>
+                        <p>«Новая экономика, новый мир и новая демографическая ситуация требуют новой финансовой системы», – заявил председатель Банка Англии Марк Карни. Цифровизация меняет структуру экономики и бизнес-модели компаний, в мировой экономике и финансах растет доля развивающихся рынков,</p>
+                    </div>
+                    <div class="infoRight">
+                        <h3>Дополнительная информация</h3>
+                        <p>«Новая экономика, новый мир и новая демографическая ситуация требуют новой финансовой системы», – заявил председатель Банка Англии Марк Карни. Цифровизация меняет структуру экономики и бизнес-модели компаний, в мировой экономике и финансах растет доля развивающихся рынков,</p>
+                    </div>
                 </div>
             </div>
         </main>
         <script src="script.js"></script>
     </body>
 </html>
+<!-- main{
+    margin-top: 54px;
+    font-size: 16px;
+    padding: 0 20px 100px;
+    overflow: hidden;
+}
+.sectionTitle{
+    margin: 20px 0;
+}
+a{
+    color: #3D4B71;
+} -->

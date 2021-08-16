@@ -8,6 +8,50 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="exchange.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            .calc{
+                float: left;
+                width: 30%;
+                overflow: hidden;
+            }
+            /* .calc:last-of-type{
+            } */
+            .calc:first-of-type{
+                width: calc(50% - 20px);
+                background-color:#F4F4F4;
+                margin-right: 20px;
+
+            }
+            .calc .sectionTitle{
+                font-size: 24px;
+                text-align: left;
+                margin: 0;
+            }
+            .calc h6{
+                width: 50%;
+                float: left;
+                color: #F2923B;
+            }
+            .calc h6:last-of-type{
+                text-align: right;
+            }
+            .calc .outputLeft, .calc .outputRight{
+                width: 50%;
+                float: left;
+                margin: 20px 0;
+                font-size: 12px;
+                text-align: left;
+            }
+            .outputRight p{
+                color: #F2923B;
+            }
+            .outputLeft p:first-child, .outputRight p:first-child{
+                margin-bottom: 20px;
+            }
+            .calc .inputContainer{
+                margin-bottom: 25px;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -89,7 +133,7 @@
             <!-- </div> -->
         </header>
         <main>
-            <h2 class="sectionTitle">Обмен</h2>
+            <h2 class="sectionTitle">Вывод</h2>
             <ul class="sideMenu">
                 <li>
                     <a href="">Обмен</a>
@@ -114,46 +158,54 @@
                     </ul>
                 </li>
             </ul>
+            <div class="currencyContainer calc">
+                <h2 class="sectionTitle">Валюта</h2>
+                <div class="inputContainer">
+                    <input type="text" placeholder="Баланс: 1,000134">
+                    <select name="" id="">
+                        <option value="">₽</option>
+                        <option value="">₿</option>
+                    </select>
+                    <img src="img/orangeArrow.svg" alt="" class="orangeArrow">
+                </div>
+            </div>
             <div class="calc">
-                <h2>Калькулятор обмена пар</h2>
-                <div>
-                    <div class="leftOption">
-                        <h4>мин. сумма</h4>
-                        <h4>3418,3713 RUB</h4>
-                    </div>
-                    <div class="rightOption">
-                        <h4>Доступно</h4>
-                        <h4>0,1004155 BTC</h4>
-                    </div>
-                </div>
                 <div class="inputContainer">
-                    <input type="text" placeholder="1 Руб. = 0,01415078 USD">
+                    <input type="text" placeholder="Адрес получателя">
                     <select name="" id="">
-                        <option value="">₽</option>
-                        <option value="">₿</option>
+                        <option value="">01</option>
+                        <option value="">02</option>
                     </select>
                     <img src="img/orangeArrow.svg" alt="" class="orangeArrow">
                 </div>
                 <div>
                     <div class="leftOption">
-                        <h4>курс обмена</h4>
-                        <h4>1 BTC = 683674,2685 RUB</h4>
-                    </div>
-                    <div class="rightOption">
-                        <a href="">
-                            <img src="img/arrows.svg" alt="">
-                        </a>
+                        <h4>Количество:</h4>
                     </div>
                 </div>
-                <div class="inputContainer">
-                    <input type="text" placeholder="1 BTC. = 9290,01 USD">
-                    <select name="" id="">
-                        <option value="">₽</option>
-                        <option value="">₿</option>
-                    </select>
-                    <img src="img/orangeArrow.svg" alt="" class="orangeArrow">
+                <div class="rangeContainer">
+                    <p id="rangeLabel">0</p>
+                    <input
+                        type="range"
+                        min="0"
+                        max="0.04244"
+                        value="0"
+                        step="0.0001"
+                        class="rangeSlider"
+                    >
+                    <h6>0 BTC</h6>
+                    <h6>0,04244 BTC</h6>
                 </div>
-                <a href="" class="orangeButton">Обменять</a>
+                <div class="outputLeft">
+                    <p>Комиссия:</p>
+                    <p>Вы получите:</p>
+                </div>
+                <div class="outputRight">
+                    <p>0,00030 BTC</p>
+                    <p>0,001 BTC</p>
+                </div>
+                
+                <a href="" class="orangeButton">Отправить</a>
             </div>
             <form action="">
                 <h2 class="sectionTitle">Ранее проводили</h2>
@@ -232,5 +284,26 @@
             </form>
         </main>
         <script src="script.js"></script>
+        <script>
+            let slider = document.getElementsByClassName("rangeSlider")[0];
+            let rangeLabel = document.getElementById("rangeLabel");
+            let dist;
+            slider.value = slider.max/2
+            getRange(slider.value);
+
+            function getRange(val) {
+                dist = slider.offsetWidth / slider.max * val;
+                if ((dist + rangeLabel.offsetWidth + 10) < slider.offsetWidth) {
+                rangeLabel.style.transform = "translateX(" + dist + "px)"
+                }
+                rangeLabel.innerHTML = val + " BTC";
+            }
+
+            slider.oninput = function() {
+                // norm =  (slider.offsetWidth - 18) / rangeLabel.offsetWidth;
+                getRange(this.value);
+
+            }
+        </script>
     </body>
 </html>

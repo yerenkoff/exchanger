@@ -1,4 +1,8 @@
 let menuButtons = document.getElementsByClassName("menuButton");
+let loginButton = document.getElementsByClassName("loginButton")[0];
+let signUpButton = document.getElementsByClassName("signUpButton")[1];
+let loginModal = document.getElementsByClassName("loginModal")[0];
+let signUpModal = document.getElementsByClassName("signUpModal")[0];
 
 if (window.matchMedia("(max-width: 700px)").matches) {
     for (let menuButton of menuButtons) {
@@ -24,10 +28,25 @@ if (window.matchMedia("(max-width: 700px)").matches) {
     }
 }
 
+loginButton.onclick = () => {
+    loginModal.style.display = "block";
+}
+loginModal.onclick = () => {
+    loginModal.style.display = "none";
+}
+loginModal.children[0].onclick = (e) => {
+    e.stopPropagation();
+}
 
-
-
-
+signUpButton.onclick = () => {
+    signUpModal.style.display = "block";
+}
+signUpModal.onclick = () => {
+    signUpModal.style.display = "none";
+}
+signUpModal.children[0].onclick = (e) => {
+    e.stopPropagation();
+}
 
 
 

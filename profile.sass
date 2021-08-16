@@ -1,0 +1,122 @@
+main
+    margin-top: 54px
+    font-size: 16px
+    padding: 0 20px 100px
+    overflow: hidden
+
+.sectionTitle
+    margin: 20px 0
+
+a
+    color: #3D4B71
+.mainRight
+    width: 80%
+    float: left
+.profileCard
+    background-color: #F4F4F4
+    max-width: 540px
+    padding: 20px
+    border-radius: 4px
+    overflow: hidden
+    padding-top: 40px
+    margin-bottom: 20px
+    >div
+        float: left
+    .profileRight
+        width: 60%
+        p
+            text-align: left
+            color: #454545
+        >*
+            margin-bottom: 20px
+        div
+            text-align: left
+            img
+                vertical-align: middle
+        >a
+            display: block
+            text-decoration: underline
+            text-align: left
+        .profileButton
+            background-color: #3D4B71
+            color: white
+            line-height: 50px
+            border-radius: 7px
+            max-width: 200px
+            text-decoration: none
+            text-align: center
+            img
+                vertical-align: middle
+    .profileLeft
+        // background-color: tan
+        width: 40%
+        img
+            display: block
+            margin: auto
+        img:first-child
+            width: 150px
+            height: 150px
+            object-fit: cover
+            border-radius: 100%
+        >img:last-of-type
+            transform: translateY(-30%)
+.profileInfo
+    clear: both
+    border: 1px solid #3D4B71
+    position: relative
+    background-color: #fff
+    box-sizing: border-box
+    border-radius: 4px
+    // overflow: hidden
+    float: left
+    text-align: left
+    &::after
+        content: ""
+        width: 10px
+        height: 10px
+        position: absolute
+        left: 100px
+        top: -6px
+        background-color: #fff
+        transform: rotate(-45deg)
+        border-top: 1px solid #3D4B71
+        border-right: 1px solid #3D4B71
+    div
+        width: 50%
+        float: left
+        padding: 50px
+        box-sizing: border-box
+        h3
+            color: #9D9D9D
+            margin-bottom: 20px
+        p
+            color: #454545
+        
+@media (max-width: 600px)
+    .sideMenu
+        width: auto
+        margin: auto
+        margin-bottom: 50px
+    .profileCard
+        max-width: none
+
+    .profileCard .profileLeft
+        width: auto
+    .profileCard > div
+        float: none
+    .mainRight
+        width: auto
+    .profileCard .profileRight
+        width: auto
+    .profileEmail
+        text-align: center !important
+    .mainRight #orangeVip
+        float: none
+        margin: auto
+        margin-bottom: 50px
+    .mainRight .profileInfo
+        width: auto
+        &::after
+            display: none
+    .profileInfo div
+        width: auto
