@@ -46,6 +46,12 @@ main .mainContent form {
 
 main .mainContent form .tableContainer {
   overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+main .mainContent form .tableContainer::-webkit-scrollbar {
+  display: none;
 }
 
 main .mainContent form table {

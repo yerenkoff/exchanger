@@ -16,13 +16,16 @@ input, select {
 
 .calc {
   background-color: #3D4B71;
-  width: 80%;
-  float: right;
   border-radius: 10px;
   padding: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: white;
+}
+
+.calc h3 {
+  text-align: left;
+  color: #3D4B71;
 }
 
 .calc > div {
@@ -151,8 +154,6 @@ input, select {
 form {
   background: #F4F4F4;
   border-radius: 10px;
-  width: 80%;
-  float: right;
   padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -166,6 +167,12 @@ form .sectionTitle {
 
 form .tableContainer {
   overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+form .tableContainer::-webkit-scrollbar {
+  display: none;
 }
 
 form table {

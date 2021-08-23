@@ -451,6 +451,18 @@ main {
 /* .orangeButton:hover {
     background: #F0B90B;
 } */
+.customInput{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    /* float: left; */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 40px;
+    border: none;
+    padding: 0 20px;
+}
 @media (max-width: 600px) {
     .sectionTitle {
         font-size: 24px;

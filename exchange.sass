@@ -12,14 +12,17 @@ input, select
 
 .calc
     background-color: #3D4B71
-    width: 80%
-    float: right
+    // width: 80%
+    // float: right
     // margin-top: 100px
     border-radius: 10px
     padding: 25px
     box-sizing: border-box
     color: white
     // max-width: 600px
+    h3
+        text-align: left
+        color: #3D4B71
     >div
         overflow: hidden
         // background-color: #f44
@@ -122,8 +125,8 @@ input, select
 form
     background: #F4F4F4
     border-radius: 10px
-    width: 80%
-    float: right
+    // width: 80%
+    // float: right
     padding: 15px
     box-sizing: border-box
     padding-top: 0
@@ -132,6 +135,10 @@ form
         font-size: 28px
     .tableContainer
         overflow-x: scroll
+        -ms-overflow-style: none
+        scrollbar-width: none
+        &::-webkit-scrollbar
+            display: none
     table
         text-align: left
         line-height: 50px
