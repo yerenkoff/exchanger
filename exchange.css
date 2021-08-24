@@ -16,6 +16,7 @@ input, select {
 
 .calc {
   background-color: #3D4B71;
+  display: inline-block;
   border-radius: 10px;
   padding: 25px;
   -webkit-box-sizing: border-box;

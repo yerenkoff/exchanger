@@ -128,9 +128,10 @@
                 </div>
                 <div class="inputContainer">
                     <input type="text" placeholder="1 Руб. = 0,01415078 USD">
-                    <select name="" id="">
-                        <option value="">₽</option>
-                        <option value="">₿</option>
+                    <select name="" id="firstSelect">
+                        <option value="₽">₽</option>
+                        <option value="₿">₿</option>
+                        <option value="$">$</option>
                     </select>
                     <img src="img/orangeArrow.svg" alt="" class="orangeArrow">
                 </div>
@@ -140,16 +141,17 @@
                         <h4>1 BTC = 683674,26 RUB</h4>
                     </div>
                     <div class="rightOption">
-                        <a href="">
+                        <a href="#/" id="currencyButton">
                             <img src="img/arrows.svg" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="inputContainer">
                     <input type="text" placeholder="1 BTC. = 9290,01 USD">
-                    <select name="" id="">
-                        <option value="">₽</option>
-                        <option value="">₿</option>
+                    <select name="" id="secondSelect">
+                        <option value="₽">₽</option>
+                        <option value="₿" selected>₿</option>
+                        <option value="$">$</option>
                     </select>
                     <img src="img/orangeArrow.svg" alt="" class="orangeArrow">
                 </div>
@@ -217,6 +219,34 @@
                 <button>Загрузить ещё</button>
             </form>
         </main>
+        <script>
+            let currencyButton = document.getElementById("currencyButton");
+            let places = ["1 Руб. = 0,01415078 USD", "1 BTC. = 9290,01 USD", "1 USD. = 73,76 Руб."];
+            let firstSelect = document.getElementById("firstSelect")
+            // console.log(firstSelect);
+            let secondSelect = document.getElementById("secondSelect")
+            currencyButton.onclick = () => {
+                console.log(firstSelect.selectedIndex);
+                let firstOption = firstSelect.selectedIndex;
+                let secondOption = secondSelect.selectedIndex;
+                firstSelect.options[secondOption].selected = "selected";
+                firstSelect.previousElementSibling.placeholder = places[secondOption]
+                secondSelect.options[firstOption].selected = "selected";
+                secondSelect.previousElementSibling.placeholder = places[firstOption]
+            }
+
+            function refreshSelect(s) {
+                s.previousElementSibling.placeholder = places[s.selectedIndex]
+            }
+            document.querySelectorAll("select").forEach((element) => {
+
+                refreshSelect(element)
+                element.onchange = () => {
+                    console.log(element);
+                    refreshSelect(element)
+                }
+            })
+        </script>
         <script src="script.js"></script>
     </body>
 </html>
