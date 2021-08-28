@@ -13,7 +13,8 @@ input, select
 .calc
     background-color: #3D4B71
     display: inline-block
-    // width: 80%
+    width: 80%
+    margin: auto
     // float: right
     // margin-top: 100px
     border-radius: 10px
@@ -24,6 +25,9 @@ input, select
     h3
         text-align: left
         color: #3D4B71
+        max-width: 600px
+        margin: auto
+        margin-bottom: 20px
     >div
         overflow: hidden
         // background-color: #f44
@@ -64,6 +68,13 @@ input, select
         position: relative
         border-radius: 10px
         margin-bottom: 50px
+        #bankLogo
+            width: 40px
+            height: 30px
+            object-fit: contain
+            position: absolute
+            left: 0
+            top: 5px
         input
             width: calc(100% - 80px)
             float: left
@@ -132,6 +143,8 @@ form
     box-sizing: border-box
     padding-top: 0
     margin-top: 50px
+    float: left
+    width: 100%
     .sectionTitle
         font-size: 28px
     .tableContainer
@@ -183,6 +196,8 @@ form
             cursor: pointer
             background-color: #fff
 @media (max-width: 600px)
+    .calc:first-of-type
+        margin-right: 0 !important
     main 
         .calc
             margin-top: 50px
@@ -193,3 +208,4 @@ form
                 font-size: 16px
         .sideMenu, .calc, form
             width: 100%
+            float: none

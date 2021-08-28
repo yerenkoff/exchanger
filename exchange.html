@@ -131,7 +131,7 @@
                     <select name="" id="firstSelect">
                         <option value="₽">₽</option>
                         <option value="₿">₿</option>
-                        <option value="$">$</option>
+                        <!-- <option value="$">$</option> -->
                     </select>
                     <img src="img/orangeArrow.svg" alt="" class="orangeArrow">
                 </div>
@@ -147,11 +147,11 @@
                     </div>
                 </div>
                 <div class="inputContainer">
-                    <input type="text" placeholder="1 BTC. = 9290,01 USD">
+                    <input type="text" placeholder="1 BTC. = 9290.01 USD">
                     <select name="" id="secondSelect">
                         <option value="₽">₽</option>
                         <option value="₿" selected>₿</option>
-                        <option value="$">$</option>
+                        <!-- <option value="$">$</option> -->
                     </select>
                     <img src="img/orangeArrow.svg" alt="" class="orangeArrow">
                 </div>
@@ -221,7 +221,7 @@
         </main>
         <script>
             let currencyButton = document.getElementById("currencyButton");
-            let places = ["1 Руб. = 0,01415078 USD", "1 BTC. = 9290,01 USD", "1 USD. = 73,76 Руб."];
+            let places = ["1 Руб. = 0.01415078 USD", "1 BTC. = 9290.01 USD", "1 USD. = 73.76 Руб."];
             let firstSelect = document.getElementById("firstSelect")
             // console.log(firstSelect);
             let secondSelect = document.getElementById("secondSelect")
