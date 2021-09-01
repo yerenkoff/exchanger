@@ -10,6 +10,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="submitModal">
+            <form action="">
+                <h2>Вы уверены, что хотите обменять?</h2>
+                <button>Нет</button>
+                <button>Да</button>
+            </form>
+        </div>
         <header>
             <!-- <div class="container"> -->
             <a href="index.html" id="logo">
@@ -155,7 +162,7 @@
                     </select>
                     <img src="img/orangeArrow.svg" alt="" class="orangeArrow">
                 </div>
-                <a href="" class="orangeButton">Обменять</a>
+                <a href="#/" class="orangeButton exchangeButton">Обменять</a>
             </div>
             <form action="">
                 <h2 class="sectionTitle">История обменов</h2>
@@ -223,8 +230,22 @@
             let currencyButton = document.getElementById("currencyButton");
             let places = ["1 Руб. = 0.01415078 USD", "1 BTC. = 9290.01 USD", "1 USD. = 73.76 Руб."];
             let firstSelect = document.getElementById("firstSelect")
+            let submitModal = document.getElementsByClassName("submitModal")[0];
             // console.log(firstSelect);
             let secondSelect = document.getElementById("secondSelect")
+            let exchangeButton = document.getElementsByClassName("exchangeButton")[0]
+
+            exchangeButton.onclick = () => {
+                submitModal.style.display = "block";
+            }
+            submitModal.onclick = () => {
+                submitModal.style.display = "none";
+            }
+
+            submitModal.children[0].onclick = (e) => {
+                e.stopPropagation();
+            }
+
             currencyButton.onclick = () => {
                 console.log(firstSelect.selectedIndex);
                 let firstOption = firstSelect.selectedIndex;

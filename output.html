@@ -173,7 +173,7 @@
             </div>
             <div class="calc">
                 <!-- <div class="inputContainer"> -->
-                    <div class="inputContainer" style="margin-bottom: 20px;">
+                    <div class="inputContainer bankContainer" style="margin-bottom: 20px;">
                         <img id="bankLogo" src="img/tinkoff.svg" alt="">
                         <!-- <input style="pointer-events: none; padding-left: 40px;" type="text" placeholder="Тинькофф"> -->
                         <select name="" id="" onchange="bankChange(this)" style="width: 100%; font-size: 16px; padding-left: 40px; text-align-last: left;">
@@ -300,10 +300,13 @@
             let rangeLabel = document.getElementById("rangeLabel");
             let currencyMax = document.getElementById("currencyMax");
             let dist;
+            let bankContainer = document.getElementsByClassName("bankContainer")[0];
             slider.value = slider.max/2
             currencies = ["BTC", "Руб."]
             let currency = currencies[0];
             getRange(slider.value);
+            bankContainer.style.display = "none";
+
 
             balances = ["0.04244", "10000"]
             bankLogos = ["img/tinkoff.svg", "img/sberbank.svg"]
@@ -321,6 +324,12 @@
                 slider.value = slider.max/2
                 currencyMax.innerHTML = balances[s.selectedIndex] + " " + currencies[s.selectedIndex]
                 getRange(slider.value);
+                if (s.selectedIndex == 1) {
+                    bankContainer.style.display = "block";
+                }
+                else {
+                    bankContainer.style.display = "none";
+                }
             }
 
             function getRange(val) {
