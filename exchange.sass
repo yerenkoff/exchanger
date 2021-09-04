@@ -196,27 +196,34 @@ form
             cursor: pointer
             background-color: #fff
 .submitModal
-    display: none
-    background-color: rgba(0,0,0,0.8)
-    position: fixed
-    width: 100%
-    height: 100%
-    z-index: 10
-    top: 0
-    left: 0
     form
-        width: 90%
-        max-width: 500px    
-        position: absolute
-        left: 50%
-        top: 50%
-        transform: translate(-50%, -50%)
         margin: 0
-        text-align: center
-        padding: 20px
-        button
-            margin-bottom: 0
-            line-height: 40px
+        h2
+            font-weight: normal
+            margin-bottom: 20px
+        a
+            width: calc( 50% - 20px )
+            float: left
+            clear: none
+            margin: 10px
+            vertical-align: middle
+            border: 2px solid #F2923B
+            &:first-of-type
+                background: #3D4B71
+                
+            // display: inline-block
+//         width: 90%
+//         max-width: 500px    
+//         position: absolute
+//         left: 50%
+//         top: 50%
+//         transform: translate(-50%, -50%)
+//         margin: 0
+//         text-align: center
+//         padding: 20px
+//         button
+//             margin-bottom: 0
+//             line-height: 40px
 
 @media (max-width: 600px)
     .calc:first-of-type

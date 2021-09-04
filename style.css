@@ -393,7 +393,7 @@ main {
 .modal form{
     background-image: url("img/modal.svg");
     width: 90%;
-    max-width: 400px;
+    max-width: 600px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -403,7 +403,7 @@ main {
     background-position: center;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 50px;
 }
 .modal form a{
     display: inline-block;

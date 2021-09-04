@@ -251,33 +251,26 @@ form button:hover {
   background-color: #fff;
 }
 
-.submitModal {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  top: 0;
-  left: 0;
-}
-
 .submitModal form {
-  width: 90%;
-  max-width: 500px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   margin: 0;
-  text-align: center;
-  padding: 20px;
 }
 
-.submitModal form button {
-  margin-bottom: 0;
-  line-height: 40px;
+.submitModal form h2 {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.submitModal form a {
+  width: calc( 50% - 20px);
+  float: left;
+  clear: none;
+  margin: 10px;
+  vertical-align: middle;
+  border: 2px solid #F2923B;
+}
+
+.submitModal form a:first-of-type {
+  background: #3D4B71;
 }
 
 @media (max-width: 600px) {
