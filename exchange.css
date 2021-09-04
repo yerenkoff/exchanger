@@ -267,6 +267,7 @@ form button:hover {
   margin: 10px;
   vertical-align: middle;
   border: 2px solid #F2923B;
+  padding: 0;
 }
 
 .submitModal form a:first-of-type {
