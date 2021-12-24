@@ -139,12 +139,13 @@ header {
     position: relative;
 }
 
-.menu li:nth-child(1) {
+.mobileLi {
     display: none;
 }
-
-.menu li:nth-child(2) {
-    display: none;
+.mobileLi a img{
+    object-fit: contain;
+    width: 20px !important;
+    transform: none !important;
 }
 
 .rightPart {
@@ -484,17 +485,17 @@ main {
     transform: translateY(-200%);
     /* font-size: 0; */
 }
-.signedInPanel nav a{
+.signedInNav a{
     display: block;
     float: none;
     padding: 10px 20px;
     color: #5D5D5D;
 }
-.signedInPanel nav a:hover{
+.signedInNav a:hover{
     color: #F0B90B;
     background: #f0f0f0;
 }
-.signedInPanel img{
+.signedInPanel img, .signedInNav img{
     height: 40px;
     width: 20px;
     object-fit: contain;
@@ -503,33 +504,33 @@ main {
 .signedInPanel:hover nav{
     transform: translateY(0%);
 }
-.signedInPanel nav a:first-child{
+.signedInNav a:first-child{
     border-bottom: 1px solid #E8E8E8;
     overflow: hidden;
 }
-.signedInPanel nav a:first-child div{
+.signedInNav a:first-child div{
     float: left;
 }
-.signedInPanel nav a:first-child h5{
+.signedInNav a:first-child h5{
     line-height: 40px;
     font-size: 16px;
 }
-.signedInPanel nav a:first-child .gold{
+.signedInNav a:first-child .gold{
     color: #F0B90B;
 }
-.signedInPanel nav a:first-child h5 img{
+.signedInNav a:first-child h5 img{
     height: 40px;
     display: block;
     float: left;
     margin-right: 3px;
 }
-.signedInPanel nav a:first-child>img{
+.signedInNav a:first-child>img{
     margin-left: 10px;
     display: block;
     float: left;
     height: 80px;
 }
-.signedInPanel nav a:first-child span{
+.signedInNav a:first-child span{
     background-color: rgb(255, 243, 217);
     font-size: 10px;
     padding: 0 2px;
@@ -545,7 +546,7 @@ main {
 .borderTopButton{
     border-top: 1px solid #E8E8E8;
 }
-.signedInPanel nav a>span{
+.signedInNav a>span{
     background-color: rgb(255, 226, 59);
     font-size: 12px;
     border-radius: 3px;
@@ -554,7 +555,7 @@ main {
     margin-left: 10px;
     color: #5D5D5D;
 }
-.signedInPanel nav a>span::after{
+.signedInNav a>span::after{
     content: "";
     position: absolute;
     top: 8px;
@@ -599,11 +600,11 @@ main {
         text-align: left;
         white-space: normal;
     }
-    .menu li:nth-child(1) {
+    .mobileLi:nth-child(1) {
         display: block;
         margin-top: 50px;
     }
-    .menu li:nth-child(2) {
+    .mobileLi:nth-child(2) {
         display: block;
         margin-bottom: 50px;
     }
