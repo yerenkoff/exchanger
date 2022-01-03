@@ -8,16 +8,79 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="exchange.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            .calc{
+                float: left;
+                width: 30%;
+                overflow: hidden;
+            }
+            /* .calc:last-of-type{
+            } */
+            .calc:first-of-type{
+                width: calc(70% - 20px);
+                background-color:#F4F4F4;
+                margin-right: 20px;
+
+            }
+            .calc .sectionTitle{
+                font-size: 24px;
+                text-align: left;
+                margin: 0;
+            }
+            .calc h6{
+                width: 50%;
+                float: left;
+                color: #F2923B;
+            }
+            .calc h6:last-of-type{
+                text-align: right;
+            }
+            .calc .outputLeft, .calc .outputRight{
+                width: 50%;
+                float: left;
+                margin: 20px 0;
+                font-size: 12px;
+                text-align: left;
+            }
+            .outputRight p{
+                color: #F2923B;
+            }
+            .outputLeft p:first-child, .outputRight p:first-child{
+                margin-bottom: 20px;
+            }
+            .calc .inputContainer{
+                margin-bottom: 0px;
+            }
+            .profileInfo{
+                width: 30%;
+                float: left;
+                clear: unset;
+                /* overflow: hidden; */
+                padding: 20px;
+            }
+            .profileInfo::after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                left: -6px;
+                top: 80px;
+                background-color: #fff;
+                -webkit-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+                border-top: 1px solid #3D4B71;
+                border-right: 1px solid #3D4B71;
+            }
+            .profileInfo>*{
+                margin-bottom: 20px;
+                display: block;
+            }
+            .profileInfo span{
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
-        <div class="modal submitModal">
-            <form action="">
-                <h2>Вы собираетесь обменять 1 рубль на 0,00031 Bitcoin</h2>
-                <h2>Продолжить обмен?</h2>
-                <a href="" class="orangeButton">Назад</a>
-                <a href="" class="orangeButton">Обменять</a>
-            </form>
-        </div>
         <header>
             <!-- <div class="container"> -->
             <a href="index.html" id="logo">
@@ -97,7 +160,7 @@
             <!-- </div> -->
         </header>
         <main>
-            <h2 class="sectionTitle">Обмен</h2>
+            <h2 class="sectionTitle">Ввод</h2>
             <!-- <ul class="sideMenu">
                 <li>
                     <a href="">Обмен</a>
@@ -122,104 +185,100 @@
                     </ul>
                 </li>
             </ul> -->
-            <div class="calc">
-                <h2>Калькулятор обмена пар</h2>
-                <div>
-                    <div class="leftOption">
-                        <h4>мин. сумма</h4>
-                        <h4>3418,37 RUB</h4>
-                    </div>
-                    <div class="rightOption">
-                        <h4>Доступно</h4>
-                        <h4>0,1004155 BTC</h4>
-                    </div>
-                </div>
+            <div class="currencyContainer calc">
+                <!-- <h2 class="sectionTitle">Валюта</h2> -->
+                <!-- <h3>Баланс: 1,000134</h3> -->
+                <h3>Баланс:</h3>
                 <div class="inputContainer">
-                    <input type="text" placeholder="1 Руб. = 0,01415078 USD">
-                    <select name="" id="firstSelect">
-                        <option value="₽">₽</option>
-                        <option value="₿">₿</option>
-                        <!-- <option value="$">$</option> -->
+                    <input style="pointer-events: none;" type="text" placeholder="0.04244">
+                    <select name="" id="" onchange="balanceChange(this)">
+                        <option value="">₿</option>
+                        <option value="">₽</option>
                     </select>
                     <img src="img/orangeArrow.svg" alt="" class="orangeArrow">
                 </div>
-                <div>
-                    <div class="leftOption">
-                        <h4>курс обмена</h4>
-                        <h4>1 BTC = 683674,26 RUB</h4>
-                    </div>
-                    <div class="rightOption">
-                        <a href="#/" id="currencyButton">
-                            <img src="img/arrows.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="inputContainer">
-                    <input type="text" placeholder="1 BTC. = 9290.01 USD">
-                    <select name="" id="secondSelect">
-                        <option value="₽">₽</option>
-                        <option value="₿" selected>₿</option>
-                        <!-- <option value="$">$</option> -->
-                    </select>
-                    <img src="img/orangeArrow.svg" alt="" class="orangeArrow">
-                </div>
-                <a href="#/" class="orangeButton exchangeButton">Обменять</a>
+            </div>
+            <div class="profileInfo">
+                <h3>BTC Адрес:</h3>
+                <!-- <h3>Копировать адрес</h3> -->
+                <h5>1sdfklj;sdaklja ************</h5>
+                <a href="">
+                    <img src="img/copy.svg" alt="">
+                    Копировать ссылку
+                </a>
+                <p>
+                    <span>Для пополнения кошелька отправляйте на этот адрес только BTC.</span> <br>
+                    Отправка моменты или токена, кроме BTC по этому адресу может привескти к потере средств
+                </p>
             </div>
             <form action="">
-                <h2 class="sectionTitle">История обменов</h2>
+                <h2 class="sectionTitle">Ранее выводили</h2>
                 <div class="tableContainer">
                     <table>
                         <thead>
                             <tr>
                                 <th>Дата</th>
-                                <th>Отдал Х</th>
-                                <th>Получил У</th>
+                                <th>Сумма</th>
+                                <th>Валюта</th>
                                 <th>Комиссия</th>
-                                <th>Курс</th>
+                                <th>Статус</th>
+                                <th>Счет(Адрес)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>12.07.2021</td>
                                 <td>10 000</td>
-                                <td>10 000</td>
-                                <td>0.3%</td>
-                                <td>74</td>
+                                <td>₽</td>
+                                <td>3%</td>
+                                <td>В обработке</td>
+                                <!-- <td>Пополнение</td> -->
+                                <td>934829384</td>
                             </tr>
                             <tr>
                                 <td>12.07.2021</td>
                                 <td>12 000</td>
-                                <td>12 000</td>
-                                <td>0.3%</td>
-                                <td>74</td>
+                                <td>$</td>
+                                <td>3%</td>
+                                <td>В обработке</td>
+                                <!-- <td>Вывод</td> -->
+                                <td>934829384</td>
                             </tr>
                             <tr>
                                 <td>12.07.2021</td>
                                 <td>10 000</td>
-                                <td>10 000</td>
-                                <td>0.3%</td>
-                                <td>74</td>
+                                <td>₽</td>
+                                <td>3%</td>
+                                <td>В обработке</td>
+                                <!-- <td>Пополнение</td> -->
+                                <td>934829384</td>
                             </tr>
                             <tr>
                                 <td>12.07.2021</td>
                                 <td>11 000</td>
-                                <td>11 000</td>
-                                <td>0.3%</td>
-                                <td>74</td>
+                                <td>₽</td>
+                                <td>3%</td>
+                                <td>В обработке</td>
+                                <!-- <td>Код</td> -->
+                                <td>934829384</td>
                             </tr>
                             <tr>
                                 <td>12.07.2021</td>
                                 <td>15 000</td>
-                                <td>15 000</td>
-                                <td>0.3%</td>
-                                <td>74</td>
+                                <td>$</td>
+                                <td>3%</td>
+                                <td>В обработке</td>
+                                <!-- <td>Вывод</td> -->
+                                <td>934829384</td>
                             </tr>
                             <tr>
                                 <td>12.07.2021</td>
                                 <td>10 000</td>
-                                <td>10 000</td>
-                                <td>0.3%</td>
-                                <td>74</td>
+                                <td>$</td>
+                                <td>3%</td>
+                                <td>В обработке</td>
+                                <!-- <td>Код</td> -->
+                                <td>934829384</td>
                             </tr>
                         </tbody>
                     </table>
@@ -227,48 +286,6 @@
                 <button>Загрузить ещё</button>
             </form>
         </main>
-        <script>
-            let currencyButton = document.getElementById("currencyButton");
-            let places = ["1 Руб. = 0.01415078 USD", "1 BTC. = 9290.01 USD", "1 USD. = 73.76 Руб."];
-            let firstSelect = document.getElementById("firstSelect")
-            let submitModal = document.getElementsByClassName("submitModal")[0];
-            // console.log(firstSelect);
-            let secondSelect = document.getElementById("secondSelect")
-            let exchangeButton = document.getElementsByClassName("exchangeButton")[0]
-
-            exchangeButton.onclick = () => {
-                submitModal.style.display = "block";
-            }
-            submitModal.onclick = () => {
-                submitModal.style.display = "none";
-            }
-
-            submitModal.children[0].onclick = (e) => {
-                e.stopPropagation();
-            }
-
-            currencyButton.onclick = () => {
-                console.log(firstSelect.selectedIndex);
-                let firstOption = firstSelect.selectedIndex;
-                let secondOption = secondSelect.selectedIndex;
-                firstSelect.options[secondOption].selected = "selected";
-                firstSelect.previousElementSibling.placeholder = places[secondOption]
-                secondSelect.options[firstOption].selected = "selected";
-                secondSelect.previousElementSibling.placeholder = places[firstOption]
-            }
-
-            function refreshSelect(s) {
-                s.previousElementSibling.placeholder = places[s.selectedIndex]
-            }
-            document.querySelectorAll("select").forEach((element) => {
-
-                refreshSelect(element)
-                element.onchange = () => {
-                    console.log(element);
-                    refreshSelect(element)
-                }
-            })
-        </script>
         <script src="script.js"></script>
     </body>
 </html>

@@ -289,8 +289,20 @@ form button:hover {
     font-size: 16px;
   }
   main .sideMenu, main .calc, main form {
-    width: 100%;
+    width: 100% !important;
     float: none;
+  }
+  main .profileInfo {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    float: none;
+  }
+  main .profileInfo::after {
+    top: -6px;
+    left: 50%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
 }
 /*# sourceMappingURL=exchange.css.map */
